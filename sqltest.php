@@ -1,0 +1,1 @@
+INSERT INTO `profiles` (`id`, `username`, `realname`, `passhash`, `zipcode`, `bio`, `salary`, `preference`, `email`, `likes`, `role`) VALUES (NULL, 'kolehmas', 'Sebastian Kolehmainen', 'superhemlis', '02400', 'Hello world', '10000', '1', 'kolehmas@arcada.fi', '9999', '3');
