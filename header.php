@@ -1,7 +1,7 @@
 
 
 <header>
-    <!-- Logo and menu in the header -->
+    <!-- Logo och meny i headern -->
     <img src="./media/logo.svg" alt="Website logo" />
     <div id="logo">Backend Project 2</div>
 
@@ -12,20 +12,20 @@
             <li><a href="./register.php">Register</a></li>
             <li><a href="./report.php">Report</a></li>
             <?php
-                // Check if user is logged in via session
+                // Om användarne är inloggad via SESSION()
                 if (isset($_SESSION['username'])) {
-                                                                   // Check if the current page is profile.php
-                    $currentPage = basename($_SERVER['PHP_SELF']); // Get the name of the current page
+
+                    $currentPage = basename($_SERVER['PHP_SELF']); // Namnet för nuvarande sida
 
                     if ($currentPage === 'profile.php') {
-                        // If we are already on profile.php, just display username without link
+                        // Om redan i profile.php, visa endast användarnamnet utan länk
                         print("<li><strong>" . htmlspecialchars($_SESSION['username']) . "'s Profile</strong></li>");
                     } else {
-                        // If not on profile.php, display the link to profile
+                        // Om inte i profile.php, visa en länk till profilen
                         print("<li><a href='./profile.php'>" . htmlspecialchars($_SESSION['username']) . "'s Profile</a></li>");
                     }
                 } else {
-                    // If not logged in, show a generic "Profile" link
+                    // Om inte inloggad, visa en ospecifik profilsida
                     print("<li><a href='./profile.php'>Profile</a></li>");
                 }
             ?>
